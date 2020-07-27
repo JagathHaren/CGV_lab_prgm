@@ -114,14 +114,14 @@ void displayFcn (void)
 	GLfloat sx = 0.5, sy = 0.5;
 	GLdouble theta = pi/2.0;
 	glClear (GL_COLOR_BUFFER_BIT);
-	glColor3f (0.0, 0.0, 1.0);
+	glColor3f (0.0, 1.0, 1.0);
 	triangle (verts);
 	matrix3x3SetIdentity (matComposite);
 	scale2D (sx, sy, fixedPt);
 	rotate2D (pivPt, theta);
 	translate2D (tx, ty);
 	transformVerts2D (nVerts, verts);
-	glColor3f (1.0, 0.0, 0.0);
+	glColor3f (1.0, 1.0, 0.0);
 	triangle (verts);
 	glFlush ( );
 }
